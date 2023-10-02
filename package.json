@@ -1,0 +1,24 @@
+{
+  "name": "makkuro-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martzoukos/makkuro-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martzoukos/makkuro-poc/issues"
+  },
+  "homepage": "https://github.com/martzoukos/makkuro-poc#readme",
+  "dependencies": {
+    "@linear/sdk": "^8.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "type": "module"
+}
