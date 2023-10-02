@@ -20,8 +20,18 @@ export async function listProjectIssues(projectId) {
     }
   }
   try{
-    const issues = await linearClient.issues(filters)
-    if (issues.nodes.length > 0) {
+    const issuesResponse = await linearClient.issues(filters)
+    const issuesPromises = issuesResponse.nodes.map(async issue => {
+      const comments = await issue.comments()
+      const commentsTexts = comments.nodes.map(comment => comment.body)
+      return {
+        title: issue.title,
+        description: issue.description,
+        comments: commentsTexts,
+      }
+    })
+    const issues = await Promise.all(issuesPromises)
+    if (issues.length > 0) {
       return issues
     } else {
       return null
