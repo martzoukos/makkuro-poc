@@ -18,7 +18,8 @@
   "homepage": "https://github.com/martzoukos/makkuro-poc#readme",
   "dependencies": {
     "@linear/sdk": "^8.0.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "openai": "^4.11.0"
   },
   "type": "module"
 }
